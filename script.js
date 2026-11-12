@@ -1,2 +1,12 @@
 
-console.log("Online Examination System");
+function login() {
+    let name = document.getElementById("student").value;
+
+    if (name == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter your name";
+    } else {
+        document.getElementById("message").innerHTML =
+            "Welcome " + name;
+    }
+}
