@@ -6,12 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Student Login</h2>
+    <h2>Online Examination System</h2>
 
-    <input type="text" id="student" placeholder="Enter student name">
-    <button onclick="login()">Login</button>
+    <div id="login">
+        <input type="text" id="student" placeholder="Enter student name">
+        <button onclick="login()">Login</button>
+        <p id="message"></p>
+    </div>
 
-    <p id="message"></p>
+    <div id="exam" style="display:none">
+        <h3>Answer the Questions</h3>
+
+        <p>1. Which language runs in a browser?</p>
+        <input type="radio" name="q1" value="Java"> Java
+        <input type="radio" name="q1" value="JavaScript"> JavaScript
+
+        <p>2. Which tag creates a paragraph in HTML?</p>
+        <input type="radio" name="q2" value="p"> &lt;p&gt;
+        <input type="radio" name="q2" value="h1"> &lt;h1&gt;
+
+        <br><br>
+        <button onclick="calculateResult()">Submit Exam</button>
+        <h3 id="result"></h3>
+    </div>
 
     <script src="script.js"></script>
 </body>
